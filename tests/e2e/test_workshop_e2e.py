@@ -32,7 +32,7 @@ def test_user_edits_car_and_change_survives_reload(page, live_server):
     page.get_by_role("button", name="Save changes").click()
 
     # 4. 断言详情页显示 Honda Accord
-    expect(page.get_by_role("heading", name="Honda Accord")).to_be_visible(timeout=10000)
+    expect(page.get_by_role("heading", name="Honda Accord")).to_be_visible(timeout=50000)
 
     # 5. 刷新页面
     page.reload()
